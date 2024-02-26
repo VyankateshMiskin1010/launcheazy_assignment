@@ -48,7 +48,7 @@ function Herotwo() {
             <div key={index} className="card">
               <img
                 src={cardData.imageUrl}
-                alt="Card Image"
+                alt="CardImage"
                 className="card-image"
               />
               <div className="card-content">
