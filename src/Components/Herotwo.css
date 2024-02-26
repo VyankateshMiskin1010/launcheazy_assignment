@@ -1,0 +1,134 @@
+main {
+  width: 95%;
+  margin: 0px auto;
+  background-color: #fff1f1;
+  position: relative;
+  margin-top: 5vw;
+  border-radius: 25px;
+}
+
+.content {
+  padding: 4vw 4% 0 4%; /* Adjusted padding with percentage */
+}
+
+.part_one {
+  width: 100%; /* Adjusted width to be responsive */
+  max-width: 690px; /* Added max-width to limit width on larger screens */
+}
+
+.part_one p {
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "Helvetica", sans-serif; /* Use a generic sans-serif as fallback */
+  font-size: 1em; /* Relative font size */
+  color: #6f6f6f;
+}
+
+.part_one h1 {
+  font-size: 3.2em; /* Relative font size */
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  color: #161616;
+}
+
+.part_one h4 {
+  color: #525252;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: "Helvetica";
+}
+
+.part_one h5 {
+  font-family: "Inter";
+  font-size: 1em; /* Relative font size */
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0em;
+  border: 1px solid black;
+  border-radius: 24px;
+  display: inline-block;
+  padding: 0.6em; /* Relative padding */
+  background-color: #ffffff;
+  width: auto; /* Set width to 100% */
+}
+
+@media screen and (max-width: 768px) {
+  .part_one h1 {
+    font-size: 2.5em; /* Adjusted font size for smaller screens */
+  }
+
+  .part_one h5 {
+    width: 100%; /* Set width to 100% for small screens */
+  }
+}
+.card_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  width: 400px;
+  margin: 0 10px 20px; /* Added margin for spacing between cards */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+.top_title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #525252;
+}
+.card-content h2 {
+  font-family: Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #161616;
+}
+.card-description {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  color: #525252;
+  line-height: 24px;
+}
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-around; /* Center cards on smaller screens */
+  }
+
+  .card {
+    width: 48%; /* Two cards per row, adjust as needed */
+  }
+}

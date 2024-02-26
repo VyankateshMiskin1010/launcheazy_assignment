@@ -1,0 +1,93 @@
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0vw 120px 0vw 120px;
+
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.151);
+}
+.nav_options ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2vw;
+}
+.btn_nav {
+  padding: 0.7vw 2vw;
+  background-color: #161616;
+  color: #ffffff;
+  border-radius: 8px;
+}
+/* font-family: Helvetica;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left; */
+
+ul li {
+  color: #161616;
+  font-size: 1rem;
+  font-family: Helvetica;
+  font-weight: 400;
+}
+/* Add this CSS for the hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #161616;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav_options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .nav_options.open {
+    display: flex;
+  }
+
+  .nav_options ul {
+    gap: 0;
+  }
+
+  .btn_nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .nav_options ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn_nav {
+    padding: 10px 20px;
+  }
+}

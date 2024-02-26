@@ -1,0 +1,159 @@
+/* Default styles */
+header {
+  padding: 4vw 8vw 0 8vw;
+}
+
+.first p {
+  border: 1px solid #4589ff;
+  border-radius: 50px;
+  padding: 0.4vw;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.67;
+}
+
+#sign {
+  color: #4589ff;
+}
+
+#red_dot {
+  width: 12px;
+  height: 12px;
+  background-color: #da1e28;
+  border-radius: 50%;
+  display: inline-block;
+}
+.two {
+  margin-top: -2vw;
+}
+.two h1 {
+  font-size: 80px;
+  letter-spacing: -1.6px;
+  line-height: 88px;
+}
+
+.two p {
+  font-size: 24px;
+
+  line-height: 36px;
+  letter-spacing: -0.24px;
+  margin-top: -2vw;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 996px) {
+  header {
+    padding: 10px 40px 0 40px;
+    max-height: 336px; /* Adjusted height for the header */
+  }
+
+  .first p {
+    font-size: 1.2rem;
+  }
+
+  .two {
+    height: 100%; /* Make sure .two takes full height of the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .two h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .two p {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px 24px 0px 24px;
+  }
+
+  .first p {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .two h1 {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+
+  .two p {
+    display: none;
+    font-size: 4vw;
+    line-height: 21px;
+  }
+}
+.third {
+  width: 100%;
+}
+
+.third input {
+  height: 48px;
+  width: 411px;
+  border-radius: 8px;
+  border-color: #8d8d8d;
+}
+
+.third button {
+  height: 48px;
+  width: auto;
+  background-color: #161616;
+  color: #fff;
+  gap: 1vw;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+#para {
+  width: 411px;
+}
+
+@media screen and (max-width: 768px) {
+  .third input {
+    width: 99%;
+  }
+  .third button {
+    width: 100%;
+    gap: 2vw;
+    margin-top: 1.5vw;
+  }
+  #para {
+    width: 100%;
+  }
+}
+
+.image_overlay {
+  margin-top: 20vw;
+  background-image: url("https://s3-alpha-sig.figma.com/img/3f4e/7d07/58d094ef4ccd1bf090d6bf0754e76169?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=erwfoCTxqZHlFXFCon2u-w2qHAmGAoxUJxmebvWNn7y4~SLEqy-7IKyyp-AHdyZuEZkqgJyiQcqHmqAZWTtvQtHop76D3Qy3oJBfRqkuJbC~Aj91LUQkvAKfeDiKWUB8kcU5j0oRO1K9A48JKREr51eQhH1zkCkZrxaX17cTKRH5nGMY1jd5lCoU7NYkvpx9zNWXyPlvyxBWfnzbpCidnCTRLFyFmWuBXuFnyN7SxcvJwa8PI2pDkcRIjXYvh5eFUgNapnP5cE5dagh0MgOdGkOxlALWEcFgKACEiavlGEFSqP7y6zYRLMximhntgsw09zGKgXYJ6H~gd1giAx1eHw__");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  min-height: 100vh;
+}
+
+.image_overlay img {
+  padding: 4vw 7vw 0 7vw;
+  margin-top: -15vw;
+  width: 85%;
+  border-radius: 10px;
+}
+@media screen and (max-width: 630px) {
+  .image_overlay {
+    margin-top: 50vw;
+  }
+  .image_overlay img {
+    margin-top: -12vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .image_overlay {
+    margin-top: 15vw;
+  }
+}
