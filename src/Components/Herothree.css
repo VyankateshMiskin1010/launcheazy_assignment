@@ -1,0 +1,78 @@
+.hero_three {
+  height: 354px;
+  padding: 4vw 8vw 0 8vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5vw;
+}
+.con_right {
+  width: 486px;
+}
+.con_right h1 {
+  font-family: Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.con_left {
+  display: flex;
+  height: 194px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.left_data {
+  border: 1px solid #d0e2ff;
+  border-radius: 10px;
+  width: 214px;
+  padding: 1vw;
+}
+.con_left h1 {
+  font-family: Helvetica Neue;
+  font-size: 3.2em; /* Relative font size */
+  font-weight: 200;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+.con_left p {
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #6f6f6f;
+}
+
+@media screen and (max-width: 768px) {
+  .hero_three {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-around;
+  }
+  .con_left {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero_three {
+    width: 84%;
+    align-items: center;
+  }
+  .con_right h1 {
+    font-size: 2.5em; /* Adjusted font size for smaller screens */
+  }
+  .con_left {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+  .left_data {
+    width: 100%;
+  }
+}

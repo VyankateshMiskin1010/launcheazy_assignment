@@ -2,7 +2,7 @@ import React from "react";
 import "./Herotwo.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
-
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 function Herotwo() {
   // eslint-disable-next-line no-unused-vars
   const cardDataArray = [
@@ -11,19 +11,24 @@ function Herotwo() {
       top_title: "CAMPAIGNS",
       title: "Attract potential clients",
       description:
-        "Unlock new clients effortlessly with AI-powered marketing campaigns from our library. Tailored content, precise targeting, timely delivery across channels.",
+        "Unlock new clients effortlessly with AI-powered marketing campaigns from our library. Tailored content, precise targeting, timely delivery channels.",
+      view_all: "View all Campaigns",
     },
     {
       imageUrl: "https://launcheazy.com/images/homepage/cardImage3.png",
-      top_title: "Campaigns",
-      title: "Card 2",
-      description: "Description for Card 2",
+      top_title: "WORKFLOWS",
+      title: "Convert prospects into profits",
+      description:
+        "Convert leads into paying customers by optimizing and automating funnel activities to deliver best conversion.",
+      view_all: "View all Workflows",
     },
     {
       imageUrl: "https://launcheazy.com/images/homepage/cardImage2.png",
-      top_title: "Campaigns",
-      title: "Card 2",
-      description: "Description for Card 2",
+      top_title: "PROGRAMS",
+      title: "Retain existing customers",
+      description:
+        "Increase the lifetime value of your customers by enrolling them in discount, loyalty, referral, and nurture programs.",
+      view_all: "View all Programs",
     },
     // Add more card data objects as needed
   ];
@@ -55,6 +60,13 @@ function Herotwo() {
                 <p className="top_title">{cardData.top_title}</p>
                 <h2 className="card-title">{cardData.title}</h2>
                 <p className="card-description">{cardData.description}</p>
+                <p className="view_all">
+                  {cardData.view_all}
+                  <span>
+                    {" "}
+                    <FontAwesomeIcon icon={faAngleRight} />
+                  </span>
+                </p>
               </div>
             </div>
           ))}

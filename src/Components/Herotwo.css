@@ -50,6 +50,7 @@ main {
   padding: 0.6em; /* Relative padding */
   background-color: #ffffff;
   width: auto; /* Set width to 100% */
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -68,15 +69,16 @@ main {
 }
 .card {
   width: 400px;
+  height: 460px;
   margin: 0 10px 20px; /* Added margin for spacing between cards */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #ffff;
   &:hover {
-    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.744); /* Smooth shadow on hover */
   }
 }
 
@@ -84,8 +86,11 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.4s ease-in-out; /* Added transform transition for the image */
 }
-
+.card:hover .card-image {
+  transform: scale(1.1); /* Scale the image on hover */
+}
 .card-content {
   padding: 16px;
 }
@@ -118,17 +123,33 @@ main {
 
 .card-description {
   font-size: 1rem;
-  color: #555;
+  color: #525252;
+  line-height: 24px;
 }
-
+.view_all {
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: helvetica;
+}
 @media screen and (max-width: 768px) {
-  .app {
+  .card_con {
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap onto the next line */
     justify-content: space-around; /* Center cards on smaller screens */
   }
 
-  .card {
-    width: 48%; /* Two cards per row, adjust as needed */
+  .part_one h1 {
+    font-size: 2.5em;
+  }
+
+  .part_one h5 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card_con {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-around;
   }
 }
