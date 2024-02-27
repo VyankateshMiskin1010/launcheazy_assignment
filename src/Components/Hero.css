@@ -135,7 +135,6 @@ header {
   background-image: url("https://s3-alpha-sig.figma.com/img/3f4e/7d07/58d094ef4ccd1bf090d6bf0754e76169?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=erwfoCTxqZHlFXFCon2u-w2qHAmGAoxUJxmebvWNn7y4~SLEqy-7IKyyp-AHdyZuEZkqgJyiQcqHmqAZWTtvQtHop76D3Qy3oJBfRqkuJbC~Aj91LUQkvAKfeDiKWUB8kcU5j0oRO1K9A48JKREr51eQhH1zkCkZrxaX17cTKRH5nGMY1jd5lCoU7NYkvpx9zNWXyPlvyxBWfnzbpCidnCTRLFyFmWuBXuFnyN7SxcvJwa8PI2pDkcRIjXYvh5eFUgNapnP5cE5dagh0MgOdGkOxlALWEcFgKACEiavlGEFSqP7y6zYRLMximhntgsw09zGKgXYJ6H~gd1giAx1eHw__");
   background-repeat: no-repeat;
   background-position: 100%;
-  min-height: 100vh;
 }
 
 .image_overlay img {
