@@ -1,0 +1,67 @@
+.five_main {
+  max-width: 690px;
+  text-align: center;
+  margin: 0px auto;
+  padding: 4vw 8vw 0 8vw;
+}
+.mobileScreenLeftHand {
+  display: none;
+}
+.third {
+  width: 100%;
+}
+
+.third input {
+  height: 48px;
+  width: 411px;
+  border-radius: 8px;
+  border-color: #8d8d8d;
+}
+
+.third button {
+  height: 48px;
+  width: auto;
+  background-color: #161616;
+  color: #fff;
+  gap: 1vw;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.five_main h1 {
+  font-family: Helvetica;
+  font-size: 3.3rem;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #161616;
+}
+.five_main p {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #6f6f6f;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileScreenLeftHand {
+    display: block;
+  }
+  #leftHadnh1 {
+    display: none;
+  }
+  .third input {
+    width: 99%;
+  }
+  .third button {
+    width: 100%;
+    gap: 2vw;
+    margin-top: 1.5vw;
+  }
+  .five_main h1 {
+    margin-top: 1vw;
+  }
+}
