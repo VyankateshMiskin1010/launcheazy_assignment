@@ -9,8 +9,8 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer_content">
+    <footer className="footer ">
+      <div className="footer_content container">
         <div className="footer_right">
           <div className="logo_footer">
             <img src={logo} alt="" srcset="" />
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer_newsletter">
+      <div className="footer_newsletter container">
         <div className="footer_newsletter_right">
           <p>NEWSLETTER</p>
           <h1>
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copy_rights">
+      <div className="copy_rights container">
         <div className="copy_right">
           <p>
             Copyright 2023 Launcheazy AI Private Limited. All rights reserved.

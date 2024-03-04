@@ -48,7 +48,11 @@ const CustomSlider = () => {
 
   const innerSliderStyle = {
     width: isHovered ? "70%" : "80%",
-    bottom: isHovered ? "15%" : "25%",
+    bottom: isHovered ? (window.innerWidth < 768 ? "10%" : "15%") : "25%",
+  };
+
+  const getButtonClass = (index) => {
+    return currentSlide === index ? "active" : "";
   };
 
   const getParagraphContent = () => {
@@ -56,7 +60,7 @@ const CustomSlider = () => {
       case 0:
         return "Explore AI-recommended marketing recipes to effectively market your business";
       case 1:
-        return "Auto-generate conversion focussed content for ready-to-use marketing recipes with AI";
+        return "Auto-generate conversion-focused content for ready-to-use marketing recipes with AI";
       case 2:
         return "Execute the campaign in a click and let AI handle the scheduling and optimization";
       default:
@@ -91,9 +95,55 @@ const CustomSlider = () => {
           <div className="controls-container">
             <p className="slider-paragraph">{getParagraphContent()}</p>
             <div>
-              <button onClick={() => handleButtonClick(0)}>Explore</button>
-              <button onClick={() => handleButtonClick(1)}>Personalized</button>
-              <button onClick={() => handleButtonClick(2)}>Execute</button>
+              <button
+                className={getButtonClass(0)}
+                onClick={() => handleButtonClick(0)}
+              >
+                <span
+                  style={{
+                    borderRadius: "100px",
+                    border: "1px solid black",
+                    padding: "5px 10px",
+                    backgroundColor: "#ffffff81",
+                  }}
+                >
+                  1
+                </span>{" "}
+                Explore
+              </button>
+              <button
+                className={getButtonClass(1)}
+                onClick={() => handleButtonClick(1)}
+              >
+                <span
+                  style={{
+                    borderRadius: "100px",
+                    border: "1px solid black",
+                    padding: "5px 10px",
+                    backgroundColor: "#ffffff81",
+                  }}
+                >
+                  2
+                </span>{" "}
+                Personalized
+              </button>
+              <button
+                className={getButtonClass(2)}
+                onClick={() => handleButtonClick(2)}
+              >
+                {" "}
+                <span
+                  style={{
+                    borderRadius: "100px",
+                    border: "1px solid black",
+                    padding: "5px 10px",
+                    backgroundColor: "#ffffff81",
+                  }}
+                >
+                  3
+                </span>
+                Execute
+              </button>
             </div>
           </div>
         )}

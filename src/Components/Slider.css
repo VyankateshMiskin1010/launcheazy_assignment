@@ -19,7 +19,7 @@
 .inner-slider {
   width: 100%;
   position: absolute;
-  /* bottom: 15%; */
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -66,10 +66,44 @@
 }
 
 .controls-container button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: transparent; /* Set background to transparent */
+  color: #393939; /* Set text color to blue */
   padding: 10px 20px;
-  margin: 0 10px;
+  margin-bottom: 10px;
   border: none;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.controls-container button.active {
+  background-color: #007bff;
+  color: #ffffff; /* Set text color to white for active slide */
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .background-image {
+    border-radius: 0px;
+  }
+  .inner-slider {
+    bottom: 0%;
+  }
+  /* .controls-container button {
+    display: none;
+  } */
+
+  /* Auto-play with paragraph tag on mobile screens */
+  .controls-container p {
+    animation: fadeInOut 3s infinite; /* Customize the animation duration as needed */
+  }
+
+  @keyframes fadeInOut {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
