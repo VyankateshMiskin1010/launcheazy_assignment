@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./Components/Home";
 import Hero from "./Components/Hero";
+import Slider from "./Components/Slider";
 import Herotwo from "./Components/Herotwo";
 import Herothree from "./Components/Herothree";
 import Herofour from "./Components/Herofour";
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Home />
       <Hero />
+      <Slider />
       <Herotwo />
       <Herothree />
       <Herofour />

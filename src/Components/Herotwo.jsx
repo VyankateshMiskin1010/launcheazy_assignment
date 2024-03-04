@@ -34,8 +34,8 @@ function Herotwo() {
   ];
 
   return (
-    <main>
-      <div className="content">
+    <main className="large-container">
+      <div className="content container">
         <div className="part_one">
           <p>MARKETING RECIPES</p>
           <h1>Attract. Convert. Retain</h1>
@@ -50,7 +50,7 @@ function Herotwo() {
         </div>
         <div className="card_con">
           {cardDataArray.map((cardData, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card container">
               <img
                 src={cardData.imageUrl}
                 alt="CardImage"

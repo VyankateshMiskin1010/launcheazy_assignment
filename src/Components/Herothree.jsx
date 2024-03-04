@@ -16,7 +16,7 @@ function Herothree() {
     },
   ];
   return (
-    <div className="hero_three">
+    <div className="hero_three container">
       <div className="con_right">
         <h1>Accelerate growth. Maximize savings. Reduce efforts.</h1>
       </div>

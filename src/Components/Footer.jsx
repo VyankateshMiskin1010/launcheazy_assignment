@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css"; // Import your CSS file for styling
-import logo from "./Img/logo.png";
+import logo from "./Img/Footer_logo.png";
 import fb from "./Img/footer_fb.png";
 import linkedin from "./Img/footer_Linkedin.png";
 import mail from "./Img/footer_mail.png";

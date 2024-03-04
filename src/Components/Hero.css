@@ -1,51 +1,77 @@
 /* Default styles */
 header {
-  padding: 4vw 8vw 0 8vw;
+  padding-top: 80px;
 }
-
+.first {
+  display: flex;
+  width: 389px;
+  height: 36px;
+  align-items: center;
+  justify-items: center;
+}
 .first p {
-  border: 1px solid #4589ff;
-  border-radius: 50px;
-  padding: 0.4vw;
-  display: inline-block;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.67;
+  border: 1px solid #4589ff;
+  border-radius: 50px;
+  padding-right: 10px;
 }
 
 #sign {
   color: #4589ff;
 }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgb(255, 0, 0); /* Shadow effect */
+  }
+  50% {
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Shadow effect */
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(255, 0, 0); /* Shadow effect */
+  }
+}
 
 #red_dot {
-  width: 12px;
-  height: 12px;
-  background-color: #da1e28;
-  border-radius: 50%;
   display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  animation: pulse 1s infinite; /* Adjust the duration as needed */
 }
 .two {
   margin-top: -2vw;
 }
+
 .two h1 {
+  font-family: Helvetica;
   font-size: 80px;
-  letter-spacing: -1.6px;
+  font-weight: 400;
   line-height: 88px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #161616;
 }
 
 .two p {
+  font-family: Helvetica;
   font-size: 24px;
-
+  font-weight: 400;
   line-height: 36px;
-  letter-spacing: -0.24px;
-  margin-top: -2vw;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #525252;
 }
 
 /* Responsive styles */
 @media screen and (max-width: 996px) {
   header {
-    padding: 10px 40px 0 40px;
-    max-height: 336px; /* Adjusted height for the header */
+    padding-top: 50px;
+  }
+  .first {
+    width: 100%;
   }
 
   .first p {
@@ -53,10 +79,8 @@ header {
   }
 
   .two {
-    height: 100%; /* Make sure .two takes full height of the header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .two h1 {
@@ -68,16 +92,29 @@ header {
     font-size: 3vw;
   }
 }
-
+.first p #red_dot {
+  margin-right: 8px;
+  margin-left: 8px;
+}
 @media screen and (max-width: 480px) {
   header {
-    padding: 10px 24px 0px 24px;
+    padding-top: 30px;
+  }
+  .first {
+    height: 32px;
   }
 
   .first p {
     font-size: 14px;
     text-align: center;
     width: 100%;
+    font-weight: 700;
+    line-height: 20px;
+    height: 32px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .two h1 {
@@ -90,46 +127,50 @@ header {
     font-size: 4vw;
     line-height: 21px;
   }
+
+  .third input {
+    width: 100%;
+  }
 }
+
 .third {
   width: 100%;
+}
+input {
+  display: inline-block;
 }
 
 .third input {
   height: 48px;
-  width: 411px;
   border-radius: 8px;
   border-color: #8d8d8d;
-}
-
-.third button {
-  height: 48px;
-  width: auto;
-  background-color: #161616;
-  color: #fff;
-  gap: 1vw;
-  font-size: 1rem;
-  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #para {
-  width: 411px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  header {
+    padding-top: 50px;
+  }
+
   .third input {
     width: 99%;
   }
-  .third button {
-    width: 100%;
-    gap: 2vw;
-    margin-top: 1.5vw;
-  }
+
   #para {
     width: 100%;
   }
 }
-
+/* 
 .image_overlay {
   margin-top: 20vw;
   background-image: url("https://s3-alpha-sig.figma.com/img/3f4e/7d07/58d094ef4ccd1bf090d6bf0754e76169?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=erwfoCTxqZHlFXFCon2u-w2qHAmGAoxUJxmebvWNn7y4~SLEqy-7IKyyp-AHdyZuEZkqgJyiQcqHmqAZWTtvQtHop76D3Qy3oJBfRqkuJbC~Aj91LUQkvAKfeDiKWUB8kcU5j0oRO1K9A48JKREr51eQhH1zkCkZrxaX17cTKRH5nGMY1jd5lCoU7NYkvpx9zNWXyPlvyxBWfnzbpCidnCTRLFyFmWuBXuFnyN7SxcvJwa8PI2pDkcRIjXYvh5eFUgNapnP5cE5dagh0MgOdGkOxlALWEcFgKACEiavlGEFSqP7y6zYRLMximhntgsw09zGKgXYJ6H~gd1giAx1eHw__");
@@ -138,21 +179,19 @@ header {
 }
 
 .image_overlay img {
-  padding: 4vw 7vw 0 7vw;
-  margin-top: -15vw;
-  width: 85%;
+  margin-top: -10vw;
+  width: 100%;
   border-radius: 10px;
 }
+
 @media screen and (max-width: 630px) {
-  .image_overlay {
-    margin-top: 50vw;
-  }
   .image_overlay img {
-    margin-top: -12vw;
+    margin-top: -10vw;
   }
 }
+
 @media screen and (min-width: 768px) {
   .image_overlay {
     margin-top: 15vw;
   }
-}
+} */

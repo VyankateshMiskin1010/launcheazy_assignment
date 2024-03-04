@@ -1,19 +1,24 @@
 main {
-  width: 95%;
   margin: 0px auto;
   background-color: #fff1f1;
   position: relative;
-  margin-top: 5vw;
+  margin-top: 51vw;
   border-radius: 25px;
 }
 
+/* .content {
+  padding: 4vw 4% 0 4%; 
+} */
 .content {
-  padding: 4vw 4% 0 4%; /* Adjusted padding with percentage */
+  padding-top: 2vw;
 }
-
+.large-container {
+  margin-top: 3vw;
+}
 .part_one {
   width: 100%; /* Adjusted width to be responsive */
-  max-width: 690px; /* Added max-width to limit width on larger screens */
+  max-width: 690px;
+  min-height: 228px;
 }
 
 .part_one p {
@@ -21,6 +26,7 @@ main {
   line-height: 1.4;
   font-family: "Helvetica", sans-serif; /* Use a generic sans-serif as fallback */
   font-size: 1em; /* Relative font size */
+  margin-top: 3vw;
   color: #6f6f6f;
 }
 
@@ -32,6 +38,7 @@ main {
 }
 
 .part_one h4 {
+  font-size: 20px;
   color: #525252;
   font-weight: 400;
   line-height: 1.4;
@@ -66,17 +73,23 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 .card {
-  width: 400px;
-  height: 460px;
-  margin: 0 10px 20px; /* Added margin for spacing between cards */
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for the card */
+  height: 454px; /* Let the height adjust based on content */
+  margin: 0 auto 20px; /* Center the card and add margin for spacing between cards */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-color: #ffff;
+  @media screen and (max-width: 768px) {
+    max-width: 100%; /* Make the card full width on smaller screens */
+  }
+
   &:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.744); /* Smooth shadow on hover */
   }
@@ -84,7 +97,7 @@ main {
 
 .card-image {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   object-fit: cover;
   transition: transform 0.4s ease-in-out; /* Added transform transition for the image */
 }
@@ -93,6 +106,8 @@ main {
 }
 .card-content {
   padding: 16px;
+  width: auto;
+  height: auto;
 }
 .top_title {
   font-size: 12px;
@@ -132,6 +147,9 @@ main {
   font-family: helvetica;
 }
 @media screen and (max-width: 768px) {
+  .card {
+    height: auto;
+  }
   .card_con {
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap onto the next line */
@@ -143,7 +161,7 @@ main {
   }
 
   .part_one h5 {
-    width: 100%;
+    width: 94%;
   }
 }
 @media screen and (max-width: 480px) {

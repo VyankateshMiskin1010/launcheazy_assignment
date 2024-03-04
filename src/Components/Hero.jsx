@@ -1,21 +1,18 @@
 import React from "react";
 import "./Hero.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import image_one from "./Img/assignment_img.png";
+import chevronRight from "./Img/chevron_right.png";
+// // import image_one from "./Img/assignment_img.png";
+import Btn from "./Button";
 function Hero() {
   return (
     <>
-      <header>
+      <header className="container">
         <div className="first">
           <p>
             <span id="red_dot"> </span> Our exclusive beta is live.{" "}
             <span id="sign">
-              Sign up for free{" "}
-              <span>
-                {" "}
-                <FontAwesomeIcon icon={faAngleRight} />
-              </span>
+              {" "}
+              Sign up for free <img src={chevronRight} alt="right_Icon" />
             </span>
           </p>
         </div>
@@ -32,7 +29,7 @@ function Hero() {
         </div>
         <div className="third">
           <input type="text" placeholder="Enter your work email" />
-          <button>Join the waitlist</button>
+          <Btn />
           <p id="para">
             Get access to a comprehensive directory of{" "}
             <span style={{ color: "#F18D13" }}>AI Tools </span>and{" "}
@@ -41,9 +38,11 @@ function Hero() {
           </p>
         </div>
       </header>
-      <div className="image_overlay">
-        <img src={image_one} alt="" />
-      </div>
+      {/* <div className="image_overlay">
+        <div className="container">
+          <img src={image_one} alt="slide_one" />
+        </div>
+      </div> */}
     </>
   );
 }
