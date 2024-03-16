@@ -4,6 +4,7 @@ import "./Home.css";
 import menuIcon from "./Img/Hammerburger_Icon.png";
 import logo from "./Img/Nav_Logo.png";
 import Btn from "./Button";
+
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,17 +21,17 @@ function Home() {
         <div className={`nav_options ${menuOpen ? "open" : ""}`}>
           <ul className="nav__links">
             <li className="link">
-              <Link to="/" smooth={true} onClick={toggleMenu}>
+              <Link to="aiTools" smooth={true} onClick={toggleMenu}>
                 AI Tools
               </Link>
             </li>
             <li className="link">
-              <Link to="Product" smooth={true} onClick={toggleMenu}>
+              <Link to="product" smooth={true} onClick={toggleMenu}>
                 Product
               </Link>
             </li>
             <li className="link">
-              <Link to="resourses" smooth={true} onClick={toggleMenu}>
+              <Link to="resources" smooth={true} onClick={toggleMenu}>
                 Resources
               </Link>
             </li>
@@ -40,7 +41,7 @@ function Home() {
               </Link>
             </li>
             <li className="link">
-              <Link to="contact" smooth={true} onClick={toggleMenu}>
+              <Link to="footer" smooth={true} onClick={toggleMenu}>
                 Contact Us
               </Link>
             </li>
@@ -50,7 +51,7 @@ function Home() {
           </ul>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
-          <img src={menuIcon} alt="" srcset="" height="100%" />
+          <img src={menuIcon} alt="" srcSet="" height="100%" />
         </div>
       </nav>
     </div>

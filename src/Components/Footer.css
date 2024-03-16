@@ -145,7 +145,7 @@
   }
 }
 .copy_rights {
-  /* max-width: 1300px; */
+  max-width: 1300px;
   margin: 0px auto;
   display: flex;
   align-items: center;
